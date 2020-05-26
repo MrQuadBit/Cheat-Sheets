@@ -30,3 +30,15 @@ nombre.archivo
 
 10-Agregar comentarios sin usar vim
 git commit -m "comentario"
+
+11-Regresar a un commit anterior
+git checkout #hash
+
+12-Ver ramas
+git branch
+
+13-Crear un rama
+git branch nombreRamaNueva
+
+14-Cambiar de rama
+git checkout nombreRama
