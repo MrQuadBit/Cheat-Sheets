@@ -4,9 +4,15 @@ git init o git clone
 2-Ver el estado del proyecto
 git status
 
-3-Agregar al proyecto
+3-Agregar al area de trabajo
 git add nombre.archivo
 
 4-Decir quien eres
 git config (--global) user.email "your mail"
 git config (--global) user.name "your name"
+
+5-Agregar al pryecto
+git commit nombre.archivo
+
+6-Ver los commits
+git log
