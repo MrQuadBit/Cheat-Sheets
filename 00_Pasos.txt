@@ -42,3 +42,13 @@ git branch nombreRamaNueva
 
 14-Cambiar de rama
 git checkout nombreRama
+
+15-Borrar una rama localmente
+git branch -d branchName
+	The -d option stands for --delete, which would delete the local branch, only if you have already pushed and merged it with your remote branches.
+git branch -D branchName
+	The -D option stands for --delete --force, which deletes the branch regardless of its push and merge status, so be careful using this one!
+
+16-Borra una rama remota (no probado)
+git push <remote_name> --delete <branch_name>
+git push <remote_name> :<branch_name>
