@@ -66,3 +66,8 @@ git push -u origin master
 git merge ramaEnDondeTeEncuentras laRamaQueLeQuieresFusionar
 
 //agregar un comentario sobre algo
+
+21-Agregar una rama nueva a github
+git push --set-upstream origin nueva
+
+22-Actualizar tu repositorio local
