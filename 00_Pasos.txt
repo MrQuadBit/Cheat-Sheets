@@ -64,3 +64,5 @@ git push -u origin master
 
 20-Para fusionar ramas
 git merge ramaEnDondeTeEncuentras laRamaQueLeQuieresFusionar
+
+//agregar un comentario sobre algo
