@@ -1,0 +1,12 @@
+1-Iniciar el repositorio
+git init o git clone
+
+2-Ver el estado del proyecto
+git status
+
+3-Agregar al proyecto
+git add nombre.archivo
+
+4-Decir quien eres
+git config (--global) user.email "your mail"
+git config (--global) user.name "your name"
