@@ -61,3 +61,6 @@ git remote add origin <url>
 
 19-Subir el commit o el proyecto a github
 git push -u origin master
+
+20-Para fusionar ramas
+git merge ramaEnDondeTeEncuentras laRamaQueLeQuieresFusionar
