@@ -52,3 +52,12 @@ git branch -D branchName
 16-Borra una rama remota (no probado)
 git push <remote_name> --delete <branch_name>
 git push <remote_name> :<branch_name>
+
+17-Agregar todos los archivos nuevos
+git add .
+
+18-Agregar la dirección del repositorio github
+git remote add origin <url>
+
+19-Subir el commit o el proyecto a github
+git push -u origin master
