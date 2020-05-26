@@ -71,3 +71,4 @@ git merge ramaEnDondeTeEncuentras laRamaQueLeQuieresFusionar
 git push --set-upstream origin nueva
 
 22-Actualizar tu repositorio local
+git pull
