@@ -16,3 +16,17 @@ git commit nombre.archivo
 
 6-Ver los commits
 git log
+
+7-Restaurar un archivo 
+git restore nombre.archivo
+
+8-Ver las modificaciones que se hicieron
+git diff nombre.archivo
+
+9-Crear un archivo ignorador
+.gitignore
+nombreCarpeta
+nombre.archivo
+
+10-Agregar comentarios sin usar vim
+git commit -m "comentario"
