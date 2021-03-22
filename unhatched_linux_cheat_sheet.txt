@@ -1,0 +1,126 @@
+ls -l (long) -r (reverse) -t(ordenar por tiempo) -S (ordenar por tamaño)
+	d directorio
+	- archivo
+	l enlaces simobolicos
+	s socket
+	p pipe
+	b bloque
+	c characters file
+
+	tipo 
+	permisos 
+		propietario
+		grupos
+		otros
+	Número_enlaces 
+	Propietario 
+	Grupo_propietario 
+	Tamaño_archivo 
+	Sello_horario 
+	Nombre_archivo
+aptitude moo (-v*5) easter egg
+pwd (print working directory)
+cd .. . ~
+
+su (opciones) -u (cambiar de usuario) (usuario) por defecto es root (cambiar de usuario)
+exit sale del usurario
+sl (steam locomotive) animación de un tres, existe porque es común confundirlo con ls
+
+chmod u+x file.type (change acces mode)
+	u usuario
+	g grupo
+	o otros
+	a all
+
+	+ añadir
+	= especificar
+	- eliminar
+
+	r read
+	w write
+	x execute
+
+chown opciones propietario archivo(change owner)
+sudo chown root file.type
+
+cat (concatenar)
+more
+less
+head -n num_lineas archivo
+tail -n num_lineas archivo
+
+cp (opciones) ORIGEN DESTINO
+x en directorio donde está el archivo
+r en el archivo
+wx en el destino
+
+dd (opciones) OPERANDO (copiar archivos o particiones enteras a nivel de bits)
+	-Se puede usar para clonar o eliminar (wipe) discos o particiones enteras.
+	-Se puede usar para copiar datos no procesados (raw) a dispositivos extraíbles como dispositivos USB o CD ROMS.
+	-Se puede usar para realizar una copia de reserva (backup) y restituir el MBR (Master Boot Record).
+	-Se puede usar para crear un archivo de un tamaño específico lleno de ceros binarios, el cual puede utilizarse como archivo de intercambio (swap file) (memoria virtual).
+
+	if (input file)
+	of (output file)
+	bs (block size) defacto bytes (K,M,G,T)
+	count (número de bloques que se van a leer desde el if)
+
+
+dd if=/dev/zero of=/tmp/swapex bs=1M count=50 
+El comando dd creará un archivo denominado /tmp/swapex con 50 bloques de ceros de un megabyte de tamaño
+
+dd if=/dev/sda of=/dev/sdb
+Clonar disco
+
+mv ORIGEN DESTINO
+mv f1 f2 fn Directorio
+wx en Origen y Destino
+
+rm (opciones) ARCHIVO
+	-r o -R
+
+grep (opciones) PATRON (archivo) (filto de texto) (globally regex print)
+
+sudo shutdown now (hh:mm)
+shutdown +m "message"
+
+date 
+
+ifconfig (interface configuration)
+iwconfig (interface wireless)
+
+lo es loopback
+ping IP -c N (número de pings)
+
+ps (procesos en la terminal actual)
+	PID process identifier
+	TTY nombre de la terminal
+	TIME tiempo que ocupa un proceso
+	CMD el comando que inicio el proceso
+
+	-e (todos los procesos en el sistema)
+	-f más detalle
+
+dpkg (debian package)
+apt (advance package tool)
+apt-cache search KEYWORD
+apt remove 
+apt purge
+
+cowsay
+passwd -S USAURIO
+	nombre usuario
+	Estado 
+		P password
+		L locked
+		NP no password
+	Fecha de actualización
+	Mínimo (timepo minimo que debe de pasar antes de poder actualizar)
+	Máximo (El máximo número de días que restan hasta que expire la contraseña.)
+	Aviso (El número de días precedentes a la expiración de la contraseña para que el usuario reciba el aviso.)
+	Inactividad (El número de días después de la expiración de la contraseña que la cuenta del usuario se mantendrá activa.)
+
+STDIN / STDOUT / STDERR
+
+> rescribe
+>> añade permisos de escritura

@@ -1,0 +1,25 @@
+Forma básica
+	. cualquier caracter inidivual
+	[] cualquier caracter especificado
+	[^] cualquier caracter que no es el no especificado
+	* cero o más del caracter anterior
+	^ si es el primer caracter del patrón, el patrón deberá estar al principio de la línea para coincidir si no es ^
+	$ si es el último caracter del patrón, el patrón deberá estar al final de la línea para coincidir si no es $
+
+Forma extendida (grep -E)
+	+ uno o más del patrón anterior
+	? el patrón es opcional
+	{} especificar  mínimo, máximo o coincidencias exactas en el patrón anterior
+	| alternancia - el "o" lógico
+	() se utiliza para crear grupos
+
+Ejemplos
+grep '^root' /etc/passwd (root al inicio)
+grep 'r$' alpha-first.txt (r al final)
+grep 'r..f' red.txt (palabras con la estructura 'r..f')
+grep '[0-9]' profile.txt (líneas con número)
+grep '[^0-9]' profile.txt (líneas sin numeros)
+grep '[.]' profile.txt (líneas con punto)
+grep 're*d' red.txt (líneas con 0 o más e's)
+grep 'r[oe]*d' red.txt (con o+e o sólo una de las dos, varias o niguna vez)
+grep 'ee*' red.txt (con almenos una e)

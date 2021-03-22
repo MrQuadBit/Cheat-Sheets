@@ -1,0 +1,57 @@
+Raspberry
+
+head-less configuration
+
+Raspbian
+	create wpa_supplicant.conf
+		ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+		update_config=1
+		country=<Insert 2 letter ISO 3166-1 country code here> (us mx)
+
+		network={
+		 ssid="<Name of your wireless LAN>"
+		 psk="<Password for your wireless LAN>"
+		}
+	create a ssh file without any extension
+
+
+Ubuntu
+	Add wifi
+	system-boot > network-config
+		# wifis:
+		#  wlan0:
+		#    dhcp4: true
+		#    optional: true
+		#    access-points:
+		#      myhomewifi:
+		#        password: "S3kr1t"
+
+	Find IP
+	Ubuntu
+		arp -na | grep -i "b8:27:eb"
+		arp -na | grep -i "dc:a6:32"
+	Windows
+		arp -a | findstr b8-27-eb
+		arp -a | findstr dc-a6-32
+
+	Connecting by SSH client
+	ssh ubuntu@ip
+	password: ubuntu
+
+	Error
+	Offending RSA key in /Users/isaacalves/.ssh/known_hosts:12
+	Offending RSA key in C:\Users\doblep\.ssh\known_hosts:12
+
+	ssh-keygen -R "you server hostname or ip"
+
+	Enabling SSH
+	sudo raspi-config > Interfacing Options > SSH
+	OR
+	sudo systemctl enable ssh
+	sudo systemctl start ssh
+
+	Change to root
+	sudo su 
+	deluser
+	passwd
+	sudo -i == su -

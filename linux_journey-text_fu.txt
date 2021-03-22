@@ -1,0 +1,32 @@
+(STDOUT = 0)
+> overwrite
+>> append
+
+(STDIN = 1)
+cat < file1 > file 2
+
+(STDERR = 2)
+ls fake/ 2> error.txt
+
+(redictioning STD's)
+
+ls fake/ > error.txt 2>&1 (pointing)
+ls fake/ &> error.txt
+ls fake/ &> /dev/null
+
+(Pipes) |
+transform stdout into stdin
+
+cat file.type | tee less
+
+tee file1 file2 file3 writes the same in all the files
+
+(cut)
+extract portions of text from file (it iterates over every line)
+cut -c number file
+cut -c 5-10 file
+cut -c 5- file
+cut -c -5 file
+
+cut -f number file (separate poer tabs)
+cut -f 1 -d ";" file (delimitator ;)

@@ -1,0 +1,55 @@
+Automatic updates
+sudo apt update
+sudo apt dist-upgrade
+sudo apt full-upgrade
+audo apt clean
+sudo apt install unattended-upgrades
+dpkg-reconfigure --priority=low unattended-upgrades
+	yes
+
+Add users
+adduser new_user
+deluser user
+usermod -aG sudo user
+
+SSH Authentication Key-pair
+on linux machine
+	mkdir ~/.ssh && chmod 700 ~/.ssh
+on host machine
+	ssh-keygen -b 4096
+	cd .ssh
+	windows
+		scp $env:USERPROFILE/.ssh/id_rsa.pub user@ip:~/.ssh/authorized_keys
+	linux
+		ssh-copy-id user@ip
+	Macos
+		scp ~/.ssh/id_rsa.pub user@ip:~/.ssh/authorized_keys
+
+
+Lockdown passwords
+sudo nano /ect/ssh/sshd_config
+	#Port 22 -> other_number
+	#AdressFamily any -> inet
+
+PermitRootLogin yes -> no
+PasswordAuthentication yes -> no
+
+sudo systemctl restart sshd
+
+ssh user@ip -p new_port
+
+Stands up a firewall
+sudo ss -tupln
+sudo apt install ufw
+sudo ufw status
+sudo ufw allow port_number
+sudo ufw enable
+sudo ufw allow 80/tcp
+
+Block Pings
+sudo nano /etc/ufw/before.rules
+	add after
+		# ok icmp codes for INPUT
+		-A ufw-before-input -p icmp --icmp-type echo-request -j DROP
+sudo ufw reload
+sudo reboot

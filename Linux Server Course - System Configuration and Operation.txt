@@ -1,0 +1,121 @@
+BIOS
+basic input output system
+
+UEFI
+unified extensible firmware interface
+
+GRUB
+Grand Unified Boot Loader
+-ls /boot/grub
+	-menu.lst
+	-grub.conf
+
+GRUB 2
+version 2
+-grub.cfg
+-/etc/default/grub
+	-sudo update-grub
+hold down shift key for teh hidden menu
+
+*********************************************
+(Boot Methods)
+Hardware
+PXE pre-boot Execute Environment
+it querys the DNS and response with a tftp location (tftp server where files can be stored) wher the image is stored
+IPXE insted of tftp it uses HTTP
+	these 2 are not linux supported
+USB / CD / HDD 
+
+Software
+GRUB
+ISO
+KERNEL
+Memtest
+
+Boot modules and files
+
+BIOS / UEFI
+-> GRUB / GRUB 2 -- initrd (ram disk) (instruction of how to load the data)
+-> VMlinux / VMLinuz(zip) kernel with no modules
+-> Full kernel with modules
+
+cd /boot -> initrm.img****
+cd /lib/modules
+*********************************************
+(Manipulating modules)
+Linux is modular 
+insmod path/file.ko
+	path only
+	no depends
+	fail with no explanation
+modprob name_module
+	just name of the module
+	check the dependecys that it needs
+	need maps 
+	modprob has insmod behind the scenes
+
+lsmod (list all the modules installed)
+rmmod thunderbolt-net (thunderbolt_net)
+rmmod thunderbolt 
+depmod (update dependecies of modules)
+
+*********************************************
+(Testing network connectivity)
+ping -c 4 google.com
+ping -c 4 8.8.8.8
+ifconfig
+ip add
+ip route
+reboot
+
+*********************************************
+(Testing DNS)
+dig 	 @server host		dig google.com / dig @8.8.8.8 google.com
+nslookup host 	 server
+host 	 host 	 server
+
+vi /etc/hosts
+ip 			  name
+192.168.100.8 holaputa.com
+
+service dnsmasq restart
+
+
+*********************************************
+(Locating common network config files)
+sudo su - (always sudo)
+
+/etc/hosts (first dns look up, even before checking the dns server)
+/etc/nsswitch.conf
+	hosts: files dns (order to check a host ip)
+			files (/etc/hosts)
+/etc/resolve.conf
+
+
+*********************************************
+(Identify Ubuntu and Debian Network Files)
+
+/etc/os-release (os stats)
+
+older version (16)
+/etc/network/interfaces
+
+modern version (18)
+/etc/netplan/
+	edit the file inside
+	sudo netplan apply
+sudo nmtui (network manager text user interface)
+
+
+(Identify CentOS Network Files)
+/etc/sysconfig/
+	cd netowork-scripts/
+	nano ifcfg-eth0
+sudo service network restart
+
+
+*********************************************
+(Network Bonding Modes) (vinculación)
+It's the linux way to use multiple network port in on same host or server like if it was just one IP address
+
+

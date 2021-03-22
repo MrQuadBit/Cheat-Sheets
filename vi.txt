@@ -1,0 +1,66 @@
+ex (línea por línea)
+vi (visual) vay
+vim (vi improved)
+	Movimiento
+		h	Un carácter a la izquierda
+		j	A la línea siguiente
+		k	A la línea anterior
+		l	Un carácter a la derecha
+		w	Una palabra adelante
+		b	Una palabra hacia atrás
+		^	Al principio de la línea
+		$	Al final de la línea
+	5G te lleva a la línea que buscas (número de repeticiones)
+
+	Acciones
+	cortar	d	eliminar (delete)
+	copiar	y	sacar (yank)
+	pegar	P | p	poner (put)
+
+	Eliminar
+	dd	Elimina la línea actual
+	3dd	Elimina las tres líneas siguientes
+	dw	Elimina la palabra actual
+	d3w	Elimina las tres palabras siguientes
+	d4h	Elimina cuatro caracteres hacia la izquierda
+
+	Cambiar
+	cc	Cambiar la línea actual
+	cw	Cambiar la palabra actual
+	c3w	Cambiar las tres palabras siguientess
+	c5h	Cambiar cinco caracteres hacia la izquierda
+
+	Sacar
+	yy	Sacar la línea actual
+	3yy	Sacar las tres líneas siguientes
+	yw	Sacar la palabra actual
+	y$	Sacar el fragmento desde el cursor hasta el final de la línea actual
+
+	Poner
+	p	Poner o pegar después del cursor
+	P	Poner antes del cursor
+
+	Buscar
+	? atras
+	/ adelante
+	n siguiente palabra
+	N palabra anterior
+
+	Insertar
+	a	Comenzar a insertar justo después del cursor
+	A	Comenzar a insertar al final de la línea
+	I	Comenzar a insertar justo antes del cursor
+	I	Comenzar a insertar al principio de la línea
+	o	Comenzar a insertar en una nueva línea después del cursor
+	O	Comenzar a insertar en una nueva línea antes del cursor
+
+	EX
+	:w	Escribir el documento actual al sistema de archivos
+	:w nombre_del_archivo	Guardar una copia del documento actual bajo el nombre nombre_del_archivo
+	:w!	Forzar escritura al documento actual
+	:1	Ir a la primera línea (o otra línea indicada por el número)
+	:e nombre_del_archivo	Abrir nombre_del_archivo
+	:q	Suspender (salir) (quit) si no se han realizado cambios al documento
+	:q!	Suspender sin guardar los cambios realizados al documento
+	ZZ == wq
+	:numero == numero G
