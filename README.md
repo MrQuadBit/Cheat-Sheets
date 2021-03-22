@@ -1,4 +1,3 @@
-# pruebasGIT
-Repositorio con pruebas que hecho para entender el funcionamiento de GIT
-Aquí verás en 00_pasos una guía para usar git 
-No es un tutorial para todo el publico sólo es mi sandbox
+# Cheat Sheets
+Repositorio que contiene todos los cheat sheets sobre lo que he aprendido he iré aprendiendo a lo largo del tiempo
+Sientete libre de leer lo que te agrade y usar o acomplementar información
