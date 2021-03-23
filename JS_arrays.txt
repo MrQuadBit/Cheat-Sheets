@@ -1,0 +1,6 @@
+metodos arrays
+array.length no es una función
+array.push("nuevo elemento") agrega el elemento y retorna el tamaño del arreglo
+array.pop() elimina el último elemento y retorna el elemento quitado
+array.indexOf("elemento existente") -1 si no existe
+
