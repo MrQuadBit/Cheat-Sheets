@@ -4,6 +4,18 @@ head-less configuration
 
 Raspbian
 	create wpa_supplicant.conf
+	
+		/*WPA*/
+		ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+		update_config=1 
+		
+		network={
+			ssid="your_network_name"
+			psk="your_wifi_password"
+			key_mgmt=WPA-PSK
+		} 
+		
+		/*Country*/
 		ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 		update_config=1
 		country=<Insert 2 letter ISO 3166-1 country code here> (us mx)
